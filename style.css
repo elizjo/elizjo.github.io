@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+/* body {
+    font-family: 'Josefin Sans', sans-serif;
+} */
+body {
+    background-color: #eaeff1;
+    /* background-color: #84BCDA; */
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+body {
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+}
+
+header {
+    background-color: #263d36;
+    background-image: url("header.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+    text-align: center;
+}
+
+header img {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+}
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+h1,h2,strong {
+  color: #333;
+}
+  
+a {
+    color: #69c;
+}
+
+pre {
+    background: #f5f7f9;
+    border-bottom: 1px solid #d8dee9;
+    color: #a7adba;
+}
+  
+pre {
+    border-left: 2px solid #69c;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.card_img {
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+}
+
+.projects {
+
+    /* Center the container in middle on horizontal axis */
+    margin: 0 auto;
+  
+    /* Add empty space above the container (2% of the view height) */
+    margin-top: 2vh;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    gap: 50px;
+    padding-top: 30px; 
+}
+
+.projects * {
+    box-sizing: border-box;
+}
+
+.card {
+    /* Change background color */
+    background-color: white;
+  
+    /* Add border */
+    border: 1px solid #bacdd8;
+  
+    /* Add space between the border and the content */
+    padding: 8px;
+  
+    border-radius: 12px;
+
+    margin-top: 0 auto;
+
+}
+
+/* Style div elements that have class equal to tag */
+.tag {
+    padding: 4px 8px;
+    border: 1px solid #e5eaed;
+  
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #788697;
+}
+  
+/* Style div elements that have class equal to name */
+.card_title {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-top: 16px;
+}
+
+/* Style p element */
+p {
+    font-size: 14px;
+    color: #7f8c9b;
+    line-height: 150%;
+}
+
+.card__details {
+    /* Add space around the details */
+    padding: 16px 8px 8px 8px;
+}
+
+/* Style button element */
+button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+
+    font-weight: 600;
+    color: #0077ff;
+    background-color: #e0efff;
+
+    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+    margin: 0 auto;
+    display: block;
+
+    /* Button is a clickable element, therefore it should have a pointer cursor */
+    cursor: pointer;
+}
+
+/* Add style when button is focused or hovered */
+button:focus,
+button:hover {
+  background-color: #0077ff;
+  color: #e0efff;
+}
+
+
+
