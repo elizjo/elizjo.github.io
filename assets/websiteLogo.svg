@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136" height="170" viewBox="0 0 136 170">
+  <defs>
+    <clipPath id="clip-Watch_38mm_1">
+      <rect width="136" height="170"/>
+    </clipPath>
+  </defs>
+  <g id="Watch_38mm_1" data-name="Watch 38mm – 1" clip-path="url(#clip-Watch_38mm_1)">
+    <rect width="136" height="170" fill="rgba(158,200,229,0)"/>
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(37 66.176)" fill="#f6a65b" stroke="#fff" stroke-width="3">
+      <ellipse cx="35.5" cy="34" rx="35.5" ry="34" stroke="none"/>
+      <ellipse cx="35.5" cy="34" rx="34" ry="32.5" fill="none"/>
+    </g>
+    <path id="Path_1" data-name="Path 1" d="M76.93,41.124S68.8,68.1,90.212,68.824,76.93,41.124,76.93,41.124Z" transform="translate(-32 -5.3)" fill="#73b74f" stroke="#fff" stroke-width="3"/>
+    <path id="Path_2" data-name="Path 2" d="M99.651,63.251s-2.993-16.089,14.036-16.175S99.651,63.251,99.651,63.251Z" transform="translate(-44.014 32.294) rotate(-19)" fill="#7bbc58" stroke="#fff" stroke-width="3" stroke-dasharray="2 0"/>
+  </g>
+</svg>

@@ -4,29 +4,48 @@
 body {
     margin: 0 auto;
     max-width: 50em;
+
+    background-color: white;
+    /* background-color: #84BCDA; */
+    font-family: "Raleway", sans-serif;
+
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+
+    overflow-x: hidden;
 }
 
 /* body {
     font-family: 'Josefin Sans', sans-serif;
 } */
-body {
-    background-color: #eaeff1;
-    /* background-color: #84BCDA; */
-    font-family: "Raleway", sans-serif;
+
+/* img */
+img {
+    height: 100%;
+    border-radius: 24px;
 }
 
 h1 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Raleway", sans-serif;
+    position: relative;
     text-align: center;
+    /* padding: 1rem; */
+    font-weight: 900;
 }
 
-body {
-    line-height: 1.5;
-    padding: 4em 1em;
-    color: #555;
+h4 {
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 1rem;
 }
 
-header {
+/* header {
     background-color: #263d36;
     background-image: url("header.jpg");
     background-position: center top;
@@ -42,7 +61,106 @@ header img {
     height: 120px;
     vertical-align: top;
     width: 120px;
+} */
+
+/* navigation bar */
+.flex {
+    display: flex;
+    gap: var(--gap, 2rem);
 }
+
+.logo {
+    margin: 20vh;
+    max-height: 25vh;
+}
+
+.primary-header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 9999; 
+    width: 100%; 
+    height: 18vh; 
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.primary-navigation {
+    overflow: hidden;
+    list-style: none;
+    padding: 20vh;
+    margin: 0;
+
+}
+
+/* remove toggle from desktop */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(0 0% 100% / 0.1) ;
+        backdrop-filter: blur(1rem);
+    }
+
+}
+/* text of navbar */
+.primary-navigation a {
+    text-decoration: none;
+}
+
+/* assets styled for mobile view  */
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: rgba(102,153,204,50%);
+        
+
+        /* move 100% of own width from right + */
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible= "true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        /* set on top layer  */
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url("assets/persimmon-logo.png");
+        background-repeat: no-repeat;
+        width: 1rem;
+        border: 0;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+
+    }
+
+    /* icon update w/ menu expanded */
+    .mobile-nav-toggle[aria-expanded= "true"] {
+        background-image: url();
+    }
+
+    .primary-navigation a {
+        color: white;
+    }
+}
+
 
 h2 {
     margin-top: 1em;
@@ -73,103 +191,125 @@ header h1 {
     font-weight: 300;
 }
 
-.card_img {
-    width: 100%;
-    border-radius: 12px;
-    height: 214px;
-    object-fit: cover;
+/* intro */
+.container {
+    padding: 10vh 20vh;
 }
 
-.projects {
+.blurb {
+    text-align: center;
 
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 35%;
+}
+
+.skills {
+    padding: 5vh;
+    /* display: flex; */
+}
+
+/* projects section */
+/* uses display: grid since 2 items w/ 2 rows */
+.project-header {
+    margin-top: 0;
+    padding-bottom: 5vh;
+}
+
+.project-container  {
+    position: relative;
+    /* 1st value = top/bot 2nd value = left/right */
+    padding: 0 15vh;
+    padding-bottom: 15vh;
     /* Center the container in middle on horizontal axis */
-    margin: 0 auto;
-  
-    /* Add empty space above the container (2% of the view height) */
-    margin-top: 2vh;
-
+    /* margin: 0 auto; */
+/* 
+     */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-auto-rows: auto;
-    gap: 50px;
-    padding-top: 30px; 
-}
 
-.projects * {
-    box-sizing: border-box;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+
+    column-gap: 1em;
+    row-gap: 10vh;
+
+    justify-items: stretch;
+
 }
 
 .card {
-    /* Change background color */
-    background-color: white;
-  
-    /* Add border */
-    border: 1px solid #bacdd8;
-  
-    /* Add space between the border and the content */
-    padding: 8px;
-  
-    border-radius: 12px;
-
-    margin-top: 0 auto;
-
-}
-
-/* Style div elements that have class equal to tag */
-.tag {
-    padding: 4px 8px;
-    border: 1px solid #e5eaed;
-  
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #788697;
-}
-  
-/* Style div elements that have class equal to name */
-.card_title {
-    font-size: 24px;
-    font-weight: 600;
-
-    margin-top: 16px;
-}
-
-/* Style p element */
-p {
-    font-size: 14px;
-    color: #7f8c9b;
-    line-height: 150%;
-}
-
-.card__details {
-    /* Add space around the details */
-    padding: 16px 8px 8px 8px;
-}
-
-/* Style button element */
-button {
-    border: none;
-    padding: 12px 24px;
-    border-radius: 50px;
-
-    font-weight: 600;
-    color: #0077ff;
-    background-color: #e0efff;
-
-    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
-    margin: 0 auto;
-    display: block;
-
-    /* Button is a clickable element, therefore it should have a pointer cursor */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    transform: translate(-50%, -50%);
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
     cursor: pointer;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+}
+  
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  text-align: justify;
+  color: black;
+  padding: 40px;
 }
 
-/* Add style when button is focused or hovered */
-button:focus,
-button:hover {
-  background-color: #0077ff;
-  color: #e0efff;
+h3 {
+  font-weight: 300;
 }
 
+.flap {
+  width: 100%;
+  height: 100%;
+}
 
+.flap::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background-position: 100px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.flap::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  background-position: -200px;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.projects:hover .flap::after {
+  transform: translatex(300px);
+}
+
+.projects:hover .flap::before{
+  transform: translatex(-300px);
+}
+
+.contact {
+    height: 10vh;
+    display: flex;
+    gap: 5vh;
+    align-items: center;
+    justify-content: center;
+} 
 
