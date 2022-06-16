@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>elizjo's personal website</title>
+    <link rel="icon" type="assets/persimmon-logo.png" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="nav.js" defer></script>
   </head>
@@ -9,7 +10,7 @@
   <body class= "home">
     <header class = "primary-header flex">
       <div>
-        <a href = "container"><img src = "assets/persimmon-logo.png" class = "logo"></a>
+        <a href = "" ><img src = "assets/persimmon-logo.png" class = "logo"></a>
       </div>
 
       <button class = "mobile-nav-toggle" 
@@ -29,12 +30,12 @@
             <a href = "#projects">
               <span aria-hidden="true"></span>projects</a>
           </li>
+          <li>
+            <a href = "#art">
+              <span aria-hidden="true"></span>art</a>
+          </li>
           <li> 
             <a href="assets/Johnson-Liz-ResumeGHC.pdf" target="_blank" rel="noopener noreferrer">resume</a>
-          </li>
-          <li>
-            <a href = "art-page.html">
-              <span aria-hidden="true"></span>art</a>
           </li>
         </ul>
       </nav>
@@ -86,7 +87,10 @@
             <p>Under the mentorship of Professor <a href = "https://cs.pomona.edu/~ajc//">Anthony Clark</a> with a two-student team.</p>
             </p>
           </div>
-          <a href="https://github.com/elizjo/arcs-reports"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+          <div class = "card-buttons">
+            <a class = "github-button" href="https://github.com/elizjo/arcs-reports" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Simulation Images</button>
+          </div>
           </div>
       </div>
 
@@ -110,7 +114,10 @@
             <p>User yells "JUMP" or uses spacebar to make Cecil jump over the fire obstacles.
               Character design, animation, and game backgrounds created on Procreate.</p>
           </div>
-          <a href="https://github.com/elizjo/Sagehen-Sprint"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+          <div class = "card-buttons">
+            <a class = "github-button" href="https://github.com/elizjo/Sagehen-Sprint" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Try Game</button>
+          </div>
           </div>
         </div>
 
@@ -126,21 +133,22 @@
           <div class = "items details">
             <div class = "tag-container">
               <span class="tag">Deep Learning</span>
-              <span class="tag">APIs</span>
+              <span class="tag">Dataset Creation</span>
               <span class="tag">scikit-learn</span>
               <span class="tag">Python</span>
 
             </div>
         
             <p>Explored several neural net classification models and techniques to verify model performance.
-              Worked with in a team with four Claremont College Students.</p>
+              Worked with four students from Harvey Mudd and Pomona College.</p>
 
-            <p>Created web app for
-              user interaction with best-performing model and data visualizations of 250k line dataset
-              obtained via API requests from several protein databases.</p>
+            <p>Created web app for 
+              user interaction with model and data visualizations of 250k line dataset from protein databases.</p>
           </div>
-          <a href="https://github.com/michellegarcia2000/p-rotein/tree/liz"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-          <a href = "https://github.com/elizjo/BIO174-Final-App">link to app</a>
+          <div class = "card-buttons">
+            <a class = "github-button" href="https://github.com/michellegarcia2000/p-rotein/tree/liz" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Try App</button>
+          </div>
         </div>
       </div>
 
@@ -157,31 +165,43 @@
           <div class = "items details">
             <div class = "tag-container">
               <span class="tag">NLP</span>
-              <span class="tag">APIs</span>
+              <span class="tag">Twitter API</span>
               <span class="tag">Plotly</span>
               <span class="tag">Python</span>
             </div>
 
             <p>Created web app displaying data visualizations
-              of the 10 most common words and the proportion of negative, positive, 
+              of the 10 most common words and proportion of negative, positive, 
               and neutral sentiment per four Twitter Topics relevant to the conflict.
               </p>
 
-            <p>Used Twitter API to create datasets based on relevant Twitter Topics.
-              Worked with in a team with another Pomona College student.</p>
+            <p>Worked with in a team with another Pomona College student.</p>
           </div>
-          <a href="https://github.com/elizjo/CS181-Final-Project"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-          <a href = "">link to app</a>
+          
+            <div class = "card-buttons">
+              <a class = "github-button" href="https://github.com/elizjo/CS181-Final-Project" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+              <button onclick= "window.open('http://google.com','_blank')">Try App</button>
+            </div>
+              
+            </div>
           </div>
       </div>
 
+    </div>
+
+    <div class = "art">
+      <h1>Art</h1>
+
+    </div>
+    
     <footer>
       <h1>Contact</h1>
       <h4>always happy to chat! feel free to reach me through</h4>
       <div class = "contact" id = "contact">
-        <a href="mailto:emja2020@mymail.pomona.edu"><img src = "assets/email-logo.png" alt = "email logo" width = 45px></a></li>
-        <a href="https://github.com/elizjo"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-        <a href="www.linkedin.com/in/elizjo8"><img src = "assets/linkedin-logo.png" alt= "linked in logo" width = 40px></a>
+        <a class = "email" href="mailto:emja2020@mymail.pomona.edu" ><img src = "assets/email-logo.png" alt = "email logo" width = 45px></a></li>
+        <a class = "git2" href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
+        <a class = "linked-in" href="https://www.linkedin.com/in/elizjo8/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin-logo.png" alt= "linked in logo" width = 40px></a>
+
       </div>
     </footer>
   </body>

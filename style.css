@@ -19,6 +19,7 @@ body {
     align-items: center; */
 
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 /* body {
@@ -95,7 +96,13 @@ h4 {
     text-decoration: none;
 }
 
+.primary-navigation a:active,
+.primary-navigation a:hover {
+    color: orange;
+}
+
 /* assets styled for mobile view  */
+/* media query */
 @media (max-width: 35em) {
     .primary-navigation {
         --gap: 2em;
@@ -144,7 +151,7 @@ h4 {
     }
 
     .project-container  {
-        grid-template-columns: minmax(10px, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     } 
 }
 
@@ -218,7 +225,7 @@ header h1 {
      */
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(10px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 400px;
 
     column-gap: 5vh;
@@ -236,8 +243,9 @@ header h1 {
     background: #f2f2f2;
     overflow: hidden;
     border-radius: 20px;
+    border: 1px solid #555;
     cursor: pointer;
-    box-shadow: 0 0 20px 8px #d0d0d0;
+    box-shadow: 12px 12px 0px 1px rgba(102,153,204,50%);
 }
 
 .card-img {
@@ -256,6 +264,53 @@ header h1 {
     padding: 1em;
 
 }
+
+.card-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+/* Style button element */
+button {
+    border: none;
+    padding: 12px 12px;
+    border-radius: 10px;
+  
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+
+    color: #555;
+    background-color: #e0efff;
+  
+    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+    margin: 0 auto;
+    display: block;
+    font-size: 1rem;
+
+    /* Button is a clickable element, therefore it should have a pointer cursor */
+    cursor: pointer;
+}
+
+/* Add style when button is focused or hovered */
+button:focus,
+button:hover {
+  background-color: orange;
+  color: white;
+}
+.github-button {
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.github-button:focus,
+.github-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5em 0.5em -0.4em orange;
+    transform: translateY(-0.25em);
+    color: orange;
+} 
 
 
 .content {
@@ -302,57 +357,9 @@ header h1 {
     align-items: right;
 }
 
-
-.content::before {
-    position: absolute;
-    top: 70%;
-    /* transform: translatey(-50%); */
-    text-align: justify;
-    background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
-    padding: 40px;
-    padding-top: 0;
-    background-position: 100px;
-    background-repeat: no-repeat;
-    transition: 1s;
-}
-
-
-/* .flap {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .content::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
-  background-position: 100px;
-  background-repeat: no-repeat;
-  transition: 1s;
-}
-
-.content::after {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  right: 0%;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
-  background-position: -200px;
-  background-repeat: no-repeat;
-  transition: 1s;
-} */
-
 .card:hover .content {
   transform: translatey(-380px);
   cursor: pointer;
-  /* background-position: -200px; */
-}
-
-.card:hover .content::before {
-  transform: translatey(-300px);
 }
 
 .contact {
@@ -361,6 +368,16 @@ header h1 {
     gap: 5vh;
     align-items: center;
     justify-content: center;
+    
 } 
 
-
+.email:focus, .email:hover,
+.git2:focus, .git2:hover,
+.linked-in:focus, .linked-in:hover {
+    box-shadow: 0 0.5em 0.5em -0.4em orange;
+    transform: translateY(-0.25em);
+    cursor: pointer;
+    border-radius: 50%;
+    color: orange;
+    transition: 0.1s;
+}
