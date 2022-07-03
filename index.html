@@ -5,6 +5,8 @@
     <link rel="icon" type="assets/persimmon-logo.png" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="nav.js" defer></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
 
   <body class= "home">
@@ -12,6 +14,7 @@
       <div>
         <a href = "" ><img src = "assets/persimmon-logo.png" class = "logo"></a>
       </div>
+
 
       <button class = "mobile-nav-toggle" 
       aria-controls="primary-navigation" aria-expanded="false">
@@ -45,25 +48,25 @@
       <img class = "profile-pic" 
       src = assets/profile-pic.jpg alt="pic of liz johnson">
 
-      <div class="blurb">
-        <h1>liz johnson</h1>
+      <!-- <div class="blurb"> -->
+        <h1>I'm Liz, nice to meet you!</h1>
           <h4>computer science ('24) @ Pomona College</h4> 
           
-          I am exploring topics in computer vision and machine learning at the 
-          <a href= "https://cs.pomona.edu/~ajc/arcslab" target="_blank" rel="noopener noreferrer">Autonomous Robotics and Complex Systems (ARCS) Lab.</a> 
-          Passionate about visual art since childhood, I am interested in the intersection between art and computing. </p>
-      </div>
-      </div>
-      
-      <h1 class = "project-header" id = projects>Projects</h1>
+          <p>I have been passionate about visual art since childhood, which has motivated me to find intersections between art and computing. 
+            Currently, I am exploring my academic interest in computer vision at the <a href= "https://cs.pomona.edu/~ajc/arcslab" target="_blank" rel="noopener noreferrer">Autonomous Robotics and Complex Systems (ARCS) Lab.</a> 
+            and learning front-end web development to utilize self-illustrated animations & graphics.
+          </p>
+      <!-- </div> -->
     </div>
 
-      
+    <div class = "project-header">
+      <h1> Projects</h1>
+    </div>
+
     <div class="project-container">
-    
       <!-- card 1 -->
       <div class = "card">
-        <img src = "assets/estella-courtyard.png" alt = "simulation of Estella Courtyard">
+        <img class = "card-img" src = "assets/estella-courtyard.png" alt = "simulation of Estella Courtyard">
         
         <div class = "content">
           <div class = "items head">
@@ -82,7 +85,7 @@
             <p>Creating image datasets via simulated enviroments in Unreal Engine. Applied to train image classification models aimed at
               autonomous robot navigation. <p>
 
-            <p>Under the mentorship of Professor <a href = "https://cs.pomona.edu/~ajc//">Anthony Clark</a> with a two-student team.</p>
+            <p>Under the mentorship of Professor <a href = "https://cs.pomona.edu/~ajc//">Anthony Clark</a> with a three-student team.</p>
             </p>
           </div>
           <div class = "card-buttons">
@@ -94,7 +97,7 @@
 
       <!-- card 2 -->
       <div class = "card">
-        <img class = "card-img" src = "assets/sagehen-sprint.png" alt = "Sagehen Sprint">
+        <img class = "card-img sagehen" src = "assets/sagehen-sprint.png" alt = "Sagehen Sprint">
 
         <div class="content">
           <div class = "items head">
@@ -120,7 +123,7 @@
 
       <!-- card 3 -->
       <div class = "card">
-        <img src = "assets/IDP.png" alt = "IDP proteins">
+        <img class = "card-img" src = "assets/IDP.png" alt = "IDP proteins">
         <div class = "content">
           <div class = "items head">
             <h2>P-rotein</h2>
@@ -150,7 +153,7 @@
 
       <!-- card 4 -->
       <div class = "card">
-        <img src = "assets/oscars-project.png" alt = "oscar 2022 sentiment graph">
+        <img class = "card-img" src = "assets/oscars-project.png" alt = "oscar 2022 sentiment graph">
         
         <div class = "content">
           <div class = "items head">
@@ -171,7 +174,7 @@
               neutral sentiment for each Twitter Topic researched.
               </p>
 
-            <p>Worked with in a team with another Pomona College student.</p>
+            <p>Worked with a Pomona College student.</p>
           </div>
           
             <div class = "card-buttons">
@@ -187,6 +190,14 @@
 
     <div class = "art">
       <h1>Art</h1>
+      <h4><a href= "hobbies.html">more here!</a></h4>
+        <div class = "gallery"> 
+          <img class = "art-img ivy" src = "assets/art/self-portrait2022.png" alt = "Liz Johnson's 2022 self-portrait">
+          <img class = "art-img hope" src = "assets/art/BubblingHope_Liz_Johnson.jpg" alt = "Bubbling Hope- Liz Johnson's 2019 art work" >
+          <img class = "art-img flower" src = "assets/art/flower-bandit.jpeg" alt = "Flower Bandit- Liz Johnson's 2021 art work">
+        </div>
+      </div>
+      
 
     </div>
     
