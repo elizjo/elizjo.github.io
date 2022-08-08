@@ -195,7 +195,6 @@ h4 {
 
 }
 
-
 h2 {
     margin-top: 1em;
     padding-top: 1em;
@@ -209,7 +208,7 @@ a {
     color: #69c;
 }
 
-a:hover, a:active {
+a:hover, a:active, .active a{
     color: orange;
 }
 
@@ -237,6 +236,19 @@ header h1 {
     text-align: center;
 }
 
+.links {
+    min-height: 40px;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    
+}  
+
+.container p {
+    margin-top: 0;
+}
+
 .profile-pic {
     display: block;
     width: 200px;
@@ -246,10 +258,6 @@ header h1 {
     margin-right: auto;
 }
 
-.skills {
-    padding: 5vh;
-    /* display: flex; */
-}
 
 
 /* projects section */
@@ -275,15 +283,16 @@ header h1 {
 
 }
 
+.project-container img:focus, 
+.project-container img:hover {
+    opacity: 0.15;
+}
+
 .card {
     position: relative;
     display: flex;
     align-items: center;
 
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-    background: #f2f2f2;
     overflow: hidden;
     border-radius: 25px;
 
@@ -293,10 +302,27 @@ header h1 {
 }
 
 .card-img {
-    object-fit: cover;
+    /* object-fit: cover; */
     display: flex; 
     object-position: right top;
 
+}
+
+#research-img {
+    object-position: -150px -112px;
+}
+
+#sagehen-img {
+    object-position: -20px -112px;
+}
+
+#protein-img {
+    object-position: -20px -20px;
+}
+
+#oscar-img {
+    object-position: -40px -50px;
+    height: 80%;
 }
 
 .tag-container {
@@ -310,7 +336,7 @@ header h1 {
     justify-content: space-evenly;
     padding: 1em;
     padding-bottom: 0;
-
+ 
 }
 
 .card-buttons {
@@ -404,10 +430,11 @@ button:hover {
     align-items: right;
 }
 
-.card:hover .content {
+/* .card:hover .content {
   transform: translatey(-400px);
   cursor: pointer;
-}
+  
+} */
 
 .gallery {
     display: flex;
@@ -455,27 +482,30 @@ button:hover {
     top: 70%;
     text-align: justify;
 }
+
+.circle {
+    text-align: center;
+    
+}
+
 .circle:focus, 
 .circle:hover  {
     opacity: 0.3;
 }
 
-.contact {
-    height: 10vh;
-    display: flex;
-    gap: 1em;
-    align-items: center;
-    justify-content: center;
-    
-}   
-
-.email:focus, .email:hover,
-.git2:focus, .git2:hover,
-.linked-in:focus, .linked-in:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em orange;
-    transform: translateY(-0.25em);
-    cursor: pointer;
-    border-radius: 50%;
-    color: orange;
-    transition: 0.1s;
+.skating-img {
+    object-position: -20px -30px;
 }
+
+.bike-img {
+    scale: 2;
+}
+footer {
+    padding: 5em;
+    text-align: center;
+
+}
+
+ 
+
+

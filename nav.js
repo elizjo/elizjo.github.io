@@ -15,3 +15,42 @@ navToggle.addEventListener("click", () => {
         navToggle.setAttribute('aria-expanded', false);
     }
 });
+
+// allow js to load first
+$(document).ready(function() {
+
+    // all elements w/ class of scroll 
+    var scrollLink = $('.scroll');
+    
+    // Smooth scrolling
+    // e = short for event
+    scrollLink.click(function(e) {
+        // disable jump scroll
+        e.preventDefault();
+        // animate(css property, duration in ms 
+        $('body,html').animate({
+            // how far away section is from top
+            scrollTop: $(this.hash).offset().top
+        }, 1000 );
+    });
+    
+    // Active link switching
+    $(window).scroll(function() {
+        // scrollTop() != scrollTop
+        var scrollbarLocation = $(this).scrollTop();
+        
+        // set of
+        scrollLink.each(function() {
+        
+            var sectionOffset = $(this.hash).offset().top - 100;
+        
+            //
+            if ( sectionOffset <= scrollbarLocation ) {
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+            }
+        })
+        
+    })
+    
+})

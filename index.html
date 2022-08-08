@@ -4,17 +4,18 @@
     <title>elizjo's personal website</title>
     <link rel="icon" type="assets/persimmon-logo.png" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
     <script src="nav.js" defer></script>
 
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
   </head>
 
-  <body class= "home">
+  <body class= "home" id = "top">
     <header class = "primary-header flex">
       <div>
-        <a href = "" ><img src = "assets/persimmon-logo.png" class = "logo"></a>
+        <a class = "nav-link scroll" href = "#top"><img src = "assets/heading/persimmon-logo.png" class = "logo"></a>
       </div>
-
 
       <button class = "mobile-nav-toggle" 
       aria-controls="primary-navigation" aria-expanded="false">
@@ -25,20 +26,20 @@
       <nav>
         <ul id = "primary-navigation" 
         data-visible= "false" class= "primary-navigation flex">
-          <li class = "active">
-            <a href = "#contact">
+          <li class = "nav-item active">
+            <a class = "nav-link scroll" href = "#footer">
               <span aria-hidden="true"></span>contact</a>
           </li>
-          <li>
-            <a href = "#projects">
+          <li class = "nav-item">
+            <a class = "nav-link scroll" href = "#projects">
               <span aria-hidden="true"></span>projects</a>
           </li>
-          <li>
-            <a href = "#art">
-              <span aria-hidden="true"></span>art</a>
+          <li class = "nav-item">
+            <a class = "nav-link scroll" href = "#interests">
+              <span aria-hidden="true"></span>interests</a>
           </li>
           <li> 
-            <a href="assets/Johnson-Liz-ResumeGHC.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+            <a href="assets/hobbies/Johnson-Liz-Resume2023.pdf" target="_blank" rel="noopener noreferrer">resume</a>
           </li>
         </ul>
       </nav>
@@ -46,27 +47,30 @@
 
     <div class="container" id = "container">
       <img class = "profile-pic" 
-      src = assets/profile-pic.jpg alt="pic of liz johnson">
+      src = assets/heading/profile-pic.jpg alt="pic of liz johnson">
 
-      <!-- <div class="blurb"> -->
-        <h1>I'm Liz, nice to meet you!</h1>
+        <h1>liz johnson</h1>
           <h4>computer science ('24) @ Pomona College</h4> 
-          
-          <p>I have been passionate about visual art since childhood, which has motivated me to find intersections between art and computing. 
-            Currently, I am exploring my academic interest in computer vision at the <a href= "https://cs.pomona.edu/~ajc/arcslab" target="_blank" rel="noopener noreferrer">Autonomous Robotics and Complex Systems (ARCS) Lab.</a> 
+          <div class = "links">
+            <a href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="mailto:emja2020@mymail.pomona.edu">Email</a> 
+            <a href="https://www.linkedin.com/in/elizjo8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        
+          <p>I've been passionate about visual art since childhood, which has motivated me to find intersections between art and computing. 
+            Currently, I am exploring my academic interest in computer vision at the Autonomous Robotics and Complex Systems <a href= "https://cs.pomona.edu/~ajc/arcslab" target="_blank" rel="noopener noreferrer">(ARCS) Lab.</a> 
             and learning front-end web development to utilize self-illustrated animations & graphics.
           </p>
-      <!-- </div> -->
     </div>
 
-    <div class = "project-header">
+    <div class = "project-header" id = "projects">
       <h1> Projects</h1>
     </div>
 
-    <div class="project-container">
+    <div class ="project-container">
       <!-- card 1 -->
       <div class = "card">
-        <img class = "card-img" src = "assets/estella-courtyard.png" alt = "simulation of Estella Courtyard">
+        <img class = "card-img" id = "research-img" src = "assets/projects/estella-courtyard.png" alt = "simulation of Estella Courtyard">
         
         <div class = "content">
           <div class = "items head">
@@ -97,7 +101,7 @@
 
       <!-- card 2 -->
       <div class = "card">
-        <img class = "card-img sagehen" src = "assets/sagehen-sprint.png" alt = "Sagehen Sprint">
+        <img class = "card-img" id = sagehen-img src = "assets/projects/sagehen-sprint.png" alt = "Sagehen Sprint">
 
         <div class="content">
           <div class = "items head">
@@ -123,7 +127,7 @@
 
       <!-- card 3 -->
       <div class = "card">
-        <img class = "card-img" src = "assets/IDP.png" alt = "IDP proteins">
+        <img class = "card-img" id = "protein-img" src = "assets/projects/IDP.png" alt = "IDP proteins">
         <div class = "content">
           <div class = "items head">
             <h2>P-rotein</h2>
@@ -153,13 +157,14 @@
 
       <!-- card 4 -->
       <div class = "card">
-        <img class = "card-img" src = "assets/oscars-project.png" alt = "oscar 2022 sentiment graph">
+        <img class = "card-img" id = "oscar-img" src = "assets/projects/oscars-project.png" alt = "oscar 2022 sentiment graph">
         
         <div class = "content">
           <div class = "items head">
             <h2>Oscars 2022 Slap</h2>
             <h4>Sentiment Analysis of 4 relevent Twitter Topics</h4>
           </div>
+
         <!-- equiv 2 old class "card_details" -->
           <div class = "items details">
             <div class = "tag-container">
@@ -188,9 +193,8 @@
 
     </div>
 
-    <div class = "art">
+    <div class = "art" id = "interests">
       <h1>Art</h1>
-      <h4><a href= "hobbies.html">more here!</a></h4>
         <div class = "gallery"> 
           <div class = "circle">
             <img class = "art-img" src = "assets/art/self-portrait2022.png" alt = "Liz Johnson's 2022 self-portrait">
@@ -203,19 +207,45 @@
           </div>
         </div>
       </div>
+        <h1>Sports</h1>
+        <p>
+            I picked up recreational road cycling and after my 10+ year journey in competitive skating. 
+        </p>
+
+          <div class = "project-container"> 
+            <div class = "card">
+          
+              <img class = "bike-img" src = "assets/hobbies/BackBay.JPG" alt = "Liz Johnson's 2022 self-portrait">
+              <div class = "content">
+                <div class = "items head">
+                  <h2>Cycling</h2>   
+                  <h4>My favorite spot for riding is Back Bay Loop! (Newport Beach, CA)</h4>
+                </div>
+              </div>
+              
+            </div>
+            <div class = "card">
+              <img class = "skating-img" src = "assets/hobbies/KT_Speedskating_010618-001.jpg" alt = "Bubbling Hope- Liz Johnson's 2019 art work" >
+              <div class = "content">
+                <div class = "items head">
+                  <h2>Speed Skating</h2>
+                  <h4>fun fact: I started skating since I (as a kid) thought Frozone was cool.</h4>
+                </div>
+              </div>
+            </div>
+          </div>
       
-
     </div>
-    
-    <footer>
-      <h1>Contact</h1>
-      <h4>always happy to chat! feel free to reach me through</h4>
-      <div class = "contact" id = "contact">
-        <a class = "email" href="mailto:emja2020@mymail.pomona.edu" ><img src = "assets/email-logo.png" alt = "email logo" width = 45px></a></li>
-        <a class = "git2" href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-        <a class = "linked-in" href="https://www.linkedin.com/in/elizjo8/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin-logo.png" alt= "linked in logo" width = 40px></a>
-
-      </div>
-    </footer>
+     
   </body>
+  <footer id = footer>
+    thanks for visiting :) <br>
+
+    <div class = "links">
+      <a href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:emja2020@mymail.pomona.edu">Email</a> 
+      <a href="https://www.linkedin.com/in/elizjo8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+
+  </footer>
 </html>
