@@ -12,4 +12,4 @@ https://elizjo.github.io
 + [CSS Grid vs. Flexbox: Which Should You Use and When?](https://webdesign.tutsplus.com/articles/flexbox-vs-css-grid-which-should-you-use--cms-30184)
 + [How to Create a Fixed Navigation Bar](https://www.webfx.com/blog/web-design/fixed-navigation-bar/)
 + [Responsive Navigation Bar Tutorial](https://www.youtube.com/watch?v=gXkqy0b4M5g)
-+ [Javascript Scroll Behavior](https://jsfiddle.net/s61x7c4e/)
++ [How to add Smooth Scrolling to your one page website with jQuery](https://www.youtube.com/watch?v=x0YnVwAuNQI)
