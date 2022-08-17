@@ -20,7 +20,7 @@
       <button class = "mobile-nav-toggle" 
       aria-controls="primary-navigation" aria-expanded="false">
       <!-- visually hidden, read by txt reader -->
-        <span class= "sr-only">Menu</span>
+        <!-- <span class= "sr-only"></span> -->
       </button>
 
       <nav>
@@ -67,90 +67,87 @@
       <h1> Projects</h1>
     </div>
 
-    <div class ="project-container">
+    <div class ="project-container" id = project-cont>
       <!-- card 1 -->
       <div class = "card">
         <img class = "card-img" id = "research-img" src = "assets/projects/estella-courtyard.png" alt = "simulation of Estella Courtyard">
-        
+        <div class = "items head" id = "research-text">
+          <h2>Lab Research</h2>
+          <h4>High-Fidelity Simulation Environments for Autonomous Robots</h4>
+        </div>
         <div class = "content">
-          <div class = "items head">
-            <h2>Lab Research</h2>
-            <h4>High-Fidelity Simulation Environments for Autonomous Robots</h4>
-          </div>
-        <!-- equiv 2 old class "card_details" -->
           <div class = "item details">
             <div class = "tag-container">
-              <span class="tag">Deep Learning</span>
               <span class="tag">Unreal Engine</span>
-              <span class="tag">Python & Unreal CV</span>
-              <span class="tag">Reality Capture</span>
+              <span class="tag">Client-Server</span>
             </div>
 
-            <p>Creating image datasets via simulated enviroments in Unreal Engine. Applied to train image classification models aimed at
-              autonomous robot navigation. <p>
+            <p>Creating image datasets for image classification models from high-fidelity environments built in Unreal Engine. 
+              <p>
 
             <p>Under the mentorship of Professor <a href = "https://cs.pomona.edu/~ajc//">Anthony Clark</a> with a three-student team.</p>
             </p>
+
+            <div class = "tag-container" id = card-buttons>
+              <button onclick= "window.location='https://github.com/elizjo/arcs-report/blob/master/reports/2022-07-27/2022-07-27.md';">Current Work</button>
+              <button onclick="window.location='https://github.com/elizjo/arcs-report';">Weekly Reports</button>
+            </div>
           </div>
-          <div class = "card-buttons">
-            <a class = "github-button" href="https://github.com/elizjo/arcs-reports" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Simulation Images</button>
-          </div>
-          </div>
+        </div>
       </div>
 
       <!-- card 2 -->
       <div class = "card">
-        <img class = "card-img" id = sagehen-img src = "assets/projects/sagehen-sprint.png" alt = "Sagehen Sprint">
-
+        <img class = "card-img" id = "sagehen-img" src = "assets/projects/sagehen-sprint.png" alt = "Sagehen Sprint">
+        <div class = "items head">
+          <h2>Sagehen Sprint</h2>
+          <h4>Web Game with Voice Classification & Cecil the Sagehen!</h4>
+        </div>
+        
         <div class="content">
-          <div class = "items head">
-            <h2>Sagehen Sprint</h2>
-            <h4>Web Game with Voice Classification & Cecil the Sagehen!</h4>
-          </div>
           <div class = "items details">
             <div class = "tag-container">
-              <span class="tag">HTML CSS Javascipt</span>
+              <span class="tag">HTML, CSS, JavaScript</span>
               <span class="tag">Web Development</span>
             </div>
             <p>Spin-off from the Chrome T-rex dinosaur game with Pomona College's mascot, Cecil the Sagehen. Voice commands feature via
              <a href="https://teachablemachine.withgoogle.com">Teachable Machine</a>. </p>
              
             <p> Character design, animation, and game backgrounds created on Procreate.</p>
-          </div>
-          <div class = "card-buttons">
-            <a class = "github-button" href="https://github.com/elizjo/Sagehen-Sprint" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Try Game</button>
-          </div>
+          
+            <div class = "tag-container">
+              <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">GitHub</button>
+              <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Try Game</button>
+            </div>
           </div>
         </div>
+      </div>
 
       <!-- card 3 -->
       <div class = "card">
         <img class = "card-img" id = "protein-img" src = "assets/projects/IDP.png" alt = "IDP proteins">
+        <div class = "items head">
+          <h2>P-rotein</h2>
+          <h4>Identifying Intrinsically Disordered Proteins from Amino Acid Sequences</h4>
+        </div>
+
         <div class = "content">
-          <div class = "items head">
-            <h2>P-rotein</h2>
-            <h4>Identifying Intrinsically Disordered Proteins from Amino Acid Sequences</h4>
-          </div>
         <!-- equiv 2 old class "card_details" -->
           <div class = "items details">
             <div class = "tag-container">
-              <span class="tag">Deep Learning</span>
-              <span class="tag">Dataset Creation</span>
               <span class="tag">scikit-learn</span>
-              <span class="tag">Python</span>
+              <span class="tag">Pandas, NumPy</span>
 
             </div>
         
-            <p>Neural net classification model and web app for 
-              user interaction with model and data visualization. Researched methods to verify model performance.</p>
+            <p>Built deep learning models classifying protein structure and web app for 
+              user interaction with model and data visualization. </p>
 
-            <p>Worked with 4 students from Harvey Mudd and Pomona College.</p>
+            <p>Collaborated with 4 students from Harvey Mudd and Pomona College.</p>
           </div>
-          <div class = "card-buttons">
-            <a class = "github-button" href="https://github.com/michellegarcia2000/p-rotein/tree/liz" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-            <button onclick= "window.open('https://github.com/elizjo/BIO174-Final-App','_blank')">Try App</button>
+          <div class = "tag-container">
+            <button onclick= "window.location='https://github.com/michellegarcia2000/p-rotein/tree/liz';">Model Creation</button>
+            <button onclick= "window.location='https://github.com/elizjo/BIO174-Final-App';">Try App</button>
           </div>
         </div>
       </div>
@@ -158,20 +155,17 @@
       <!-- card 4 -->
       <div class = "card">
         <img class = "card-img" id = "oscar-img" src = "assets/projects/oscars-project.png" alt = "oscar 2022 sentiment graph">
-        
-        <div class = "content">
-          <div class = "items head">
-            <h2>Oscars 2022 Slap</h2>
-            <h4>Sentiment Analysis of 4 relevent Twitter Topics</h4>
-          </div>
+        <div class = "items head">
+          <h2>Oscars 2022 Slap</h2>
+          <h4>Sentiment Analysis of 4 relevant Twitter Topics</h4>
+        </div>
 
+        <div class = "content">
         <!-- equiv 2 old class "card_details" -->
           <div class = "items details">
             <div class = "tag-container">
-              <span class="tag">NLP</span>
+              <span class="tag">Python NLTK</span>
               <span class="tag">Twitter API</span>
-              <span class="tag">Plotly</span>
-              <span class="tag">Python</span>
             </div>
 
             <p>Web app for data visualization
@@ -182,15 +176,13 @@
             <p>Worked with a Pomona College student.</p>
           </div>
           
-            <div class = "card-buttons">
-              <a class = "github-button" href="https://github.com/elizjo/CS181-Final-Project" target="_blank" rel="noopener noreferrer"><img src = "assets/GitHub-Mark.png" alt= "github logo" width = 50px></a>
-              <button onclick= "window.open('http://google.com','_blank')">Try App</button>
+            <div class = "tag-container">
+              <button onclick= "window.location='https://github.com/elizjo/CS181-Final-Project';">Data Collection</button>
+              <button onclick= "window.location='https://github.com/elizjo/BIO174-Final-App';">Try App</button>
             </div>
               
-            </div>
           </div>
-      </div>
-
+        </div>
     </div>
 
     <div class = "art" id = "interests">
@@ -206,35 +198,32 @@
             <img class = "art-img" src = "assets/art/flower-bandit.jpeg" alt = "Flower Bandit- Liz Johnson's 2021 art work">
           </div>
         </div>
-      </div>
-        <h1>Sports</h1>
+    </div>
+
+    <div class = "sports" id = "interests">
+      <h1>Sports</h1>
         <p>
-            I picked up recreational road cycling and after my 10+ year journey in competitive skating. 
+          I picked up recreational road cycling and after my 10+ year journey in competitive skating. 
         </p>
 
           <div class = "project-container"> 
             <div class = "card">
-          
-              <img class = "bike-img" src = "assets/hobbies/BackBay.JPG" alt = "Liz Johnson's 2022 self-portrait">
-              <div class = "content">
-                <div class = "items head">
+              <img class = "card-img" id = cycling src = "assets/hobbies/BackBay.JPG" alt = "Liz Johnson Biking in Newport Beach">
+                <div class = "card2-head">
                   <h2>Cycling</h2>   
                   <h4>My favorite spot for riding is Back Bay Loop! (Newport Beach, CA)</h4>
-                </div>
               </div>
-              
             </div>
+
             <div class = "card">
-              <img class = "skating-img" src = "assets/hobbies/KT_Speedskating_010618-001.jpg" alt = "Bubbling Hope- Liz Johnson's 2019 art work" >
-              <div class = "content">
-                <div class = "items head">
+              <img class = "card-img" id = skating src = "assets/hobbies/KT_Speedskating_010618-001.jpg" alt = "Liz Johnson Speed Skating" >
+                <div class = "card2-head">
                   <h2>Speed Skating</h2>
                   <h4>fun fact: I started skating since I (as a kid) thought Frozone was cool.</h4>
-                </div>
               </div>
             </div>
+
           </div>
-      
     </div>
      
   </body>

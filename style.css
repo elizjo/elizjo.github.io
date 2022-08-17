@@ -47,7 +47,6 @@ div {
 
 img {
     height: 100%;
-    border-radius: 24px;
 }
 
 h1 {
@@ -144,7 +143,7 @@ h4 {
 
         flex-direction: column;
         padding: min(30vh, 10rem) 2em;
-        background: rgba(102,153,204,50%);
+        background: rgba(102,153,204,65%);
         
 
         /* move 100% of own width from right + */
@@ -189,7 +188,7 @@ h4 {
 
 /* fix off center project container */
 @media (max-width: 420px) {
-    .project-container {
+    #project-cont {
         transform: translate(-2em, 0);
     }
 
@@ -283,11 +282,6 @@ header h1 {
 
 }
 
-.project-container img:focus, 
-.project-container img:hover {
-    opacity: 0.15;
-}
-
 .card {
     position: relative;
     display: flex;
@@ -301,56 +295,42 @@ header h1 {
     box-shadow: 12px 12px 0px 1px rgba(102,153,204,50%);
 }
 
-.card-img {
-    /* object-fit: cover; */
-    display: flex; 
-    object-position: right top;
-
-}
-
 #research-img {
-    object-position: -150px -112px;
+    object-position: -150px 120px;
 }
 
 #sagehen-img {
-    object-position: -20px -112px;
+    object-position: -20px -25px;
 }
 
 #protein-img {
-    object-position: -20px -20px;
+    object-position: -20px 80px;
 }
 
 #oscar-img {
-    object-position: -40px -50px;
+    object-position: -40px 40px;
     height: 80%;
 }
 
 .tag-container {
     display: grid;
+    min-height: max-content;
     grid-template-columns: repeat(2, minmax(10px, 1fr));
     column-gap: 5px;
     row-gap: 5px;
 
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;
     padding: 1em;
-    padding-bottom: 0;
  
-}
-
-.card-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 
 /* Style button element */
 button {
     border: none;
-    padding: 12px 12px;
     border-radius: 10px;
-  
+    padding: 8px 8px;
+
     font-family: "Raleway", sans-serif;
     font-weight: 600;
 
@@ -366,36 +346,29 @@ button {
     cursor: pointer;
 }
 
+
+
 /* Add style when button is focused or hovered */
 button:focus,
 button:hover {
   background-color: orange;
   color: white;
 }
-.github-button {
-    border-radius: 50%;
-    transition: 1s;
-}
-
-.github-button:focus,
-.github-button:hover {
-    cursor: pointer;
-    box-shadow: 0 0.5em 0.5em -0.4em orange;
-    transform: translateY(-0.25em);
-    color: orange;
-} 
-
 
 .content {
   position: absolute;
-  top: 70%;
-  /* transform: translatey(-50%); */
   text-align: justify;
-  background: url("https://pbs.twimg.com/profile_images/1347260174176710658/2GfSZ1i__400x400.jpg") white;
+  top: 13%;
+
+  border-radius: 25px;
+  background: white;
   padding: 1em;
-  padding-top: 0;
-  background-repeat: no-repeat;
-  transition: 1s;
+  height: 79%;
+}
+
+.head {
+    position: absolute;
+    top: -1%;
 }
 
 .head h2 {
@@ -406,35 +379,58 @@ button:hover {
 }
 
 .head h4 {
-    margin: 0;
-    padding-bottom: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
     font-weight: 500;
 }
 
 .tag {
+    border: none;
+    border-radius: 10px;
     padding: 4px 2px;
-    border: 1px solid #e5eaed;
+  
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
 
-    border-radius: 50px;
+    color: #555;
+    background-color: #e0efff;
+  
     font-size: 12px;
     font-weight: 600;
     text-align: center;
-    color: #788697;
 }
 
 .project-container p {
-    text-align: left;
+    text-align: center;
+    margin-top: 0;
 }
 
 .content a {
     align-items: right;
 }
 
-/* .card:hover .content {
-  transform: translatey(-400px);
-  cursor: pointer;
-  
-} */
+/* FADE ANIMATION of img & fade in text*/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+.card .content {
+    opacity: 0;
+    animation: fadeOut 500ms;
+}
+
+.card:hover .content {
+    animation: fadeIn 500ms;
+    opacity: 1;
+}
+
 
 .gallery {
     display: flex;
@@ -461,12 +457,8 @@ button:hover {
     overflow: hidden;
     object-position: top;
     border-radius: 50%;
-
     background: #f2f2f2;
-    overflow: hidden;
 
-    border: 1px solid #555;
-    box-shadow: 12px 12px 0px 1px rgba(102,153,204,50%);
 
     opacity: 1;
     transition: .5s ease;
@@ -484,22 +476,43 @@ button:hover {
 }
 
 .circle {
-    text-align: center;
-    
+    border: 1px solid #555;
+    box-shadow: 12px 12px 0px 1px rgba(102,153,204,50%);
+    border-radius: 50%;
 }
 
-.circle:focus, 
-.circle:hover  {
+.art-img:focus, 
+.art-img:hover  {
     opacity: 0.3;
 }
 
-.skating-img {
-    object-position: -20px -30px;
+.sports p {
+    text-align: center;
 }
 
-.bike-img {
+.card2-head {
+    position: absolute;
+    top: 75%;
+    text-align: center;
+    background-color: white;
+}  
+
+.card2-head h2 {
+    padding-top: 0;
+    padding-top: 12px;
+    margin: 0;
+}
+
+.card2-head h4 {
+    margin-left: 12px;
+    margin-right: 12px;
+    font-weight: 500;
+}
+
+#cycling {
     scale: 2;
 }
+
 footer {
     padding: 5em;
     text-align: center;
