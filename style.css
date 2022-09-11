@@ -161,20 +161,20 @@ h4 {
         position: fixed;
         /* set on top layer  */
         z-index: 9999;
-        background-color: transparent;
-        background-image: url("assets/persimmon-logo.png");
-        background-repeat: no-repeat;
+        /* background-color: transparent;
+        /* background-image: url("assets/persimmon-logo.png"); */
+        /* background-repeat: no-repeat;
         width: 1rem;
         border: 0;
-        aspect-ratio: 1;
+        aspect-ratio: 1;  */
         top: 2rem;
-        right: 2rem;
+        right: 15%;
 
     }
 
     /* icon update w/ menu expanded */
     .mobile-nav-toggle[aria-expanded= "true"] {
-        background-image: url();
+        background-image: url("assets/persimmon-logo.png");
     }
 
     .primary-navigation a {
@@ -246,6 +246,11 @@ header h1 {
 
 .container p {
     margin-top: 0;
+}
+
+#current h2 {
+    padding-top: 0;
+    margin-top: 0.5rem;
 }
 
 .profile-pic {
@@ -402,7 +407,7 @@ button:hover {
 
 .project-container p {
     text-align: center;
-    margin-top: 0;
+    margin-top: 5%;
 }
 
 .content a {
