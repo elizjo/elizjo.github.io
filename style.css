@@ -426,7 +426,8 @@ button:hover {
     animation: fadeOut 500ms;
 }
 
-.card:hover .content {
+.card:focus, 
+.card:hover  .content {
     animation: fadeIn 500ms;
     opacity: 1;
 }
