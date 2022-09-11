@@ -53,6 +53,15 @@ $(document).ready(function() {
         })
         
     })
+
+    window.onscroll = function(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            // you're at the bottom of the page
+            $("#hobbies").parent().removeClass('active');
+            $("#contact").parent().addClass('active');
+            // $("#hobbies").parent().siblings().removeClass('active');
+        } 
+    };
     
 });
 
