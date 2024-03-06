@@ -78,6 +78,14 @@ h4 {
     margin: -20px 0 0 2em;
 }
 
+.logo:active, .logo:hover {
+    opacity: 0.3;
+}
+
+.bottom-logo {
+
+}
+
 .primary-header {
     position: fixed;
     top: 0; 
@@ -300,6 +308,16 @@ header h1 {
     box-shadow: 12px 12px 0px 1px rgba(102,153,204,50%);
 }
 
+#p-recs-img {
+    object-position: 0px 120px;
+    
+}
+
+#archive-img {
+    object-position: -100px 100px;
+
+}
+
 #research-img {
     object-position: -150px 120px;
 }
@@ -492,7 +510,7 @@ button:hover {
     opacity: 0.3;
 }
 
-.sports p {
+.sports, .art p {
     text-align: center;
 }
 
@@ -520,7 +538,7 @@ button:hover {
 }
 
 footer {
-    padding: 5em;
+    padding-top: 5em;
     text-align: center;
 
 }

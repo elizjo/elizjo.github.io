@@ -65,17 +65,3 @@ $(document).ready(function() {
     
 });
 
-
-// $('document').ready(function(){
-//     // all elements w/ class of card
-//     var cardA = $('.card:nth-of-type(1)')
-
-//     // // back of card to be displayed on hover
-//     // var cardInfo = $('.content:nth-child(1)')
-
-//     cardA.hover(function() {
-//         $('.content').fadeIn(500);
-//     }, function() {
-//         $('.content').fadeOut(500);
-//     });
-// });

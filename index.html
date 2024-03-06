@@ -2,27 +2,27 @@
 <html>
   <head>
     <title>elizjo's personal website</title>
-    <link rel="icon" type="assets/persimmon-logo.png" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/heading/persimmon-logo.png"/>
+
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js">
     </script>
     <script src="nav.js" defer></script>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/persimmon.ico">
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   </head>
 
   <body class= "home" id = "top">
+
     <header class = "primary-header flex">
       <div>
-        <a class = "nav-link scroll" href = "#top"><img src = "assets/heading/persimmon-logo.png" class = "logo"></a>
+        <a class = "nav-link scroll" href = "#top">
+          <img src = "assets/heading/persimmon-logo.png" class = "logo">
+         </a>
       </div>
 
       <button class = "mobile-nav-toggle" 
@@ -44,7 +44,7 @@
           </li>
           <li class = "nav-item">
             <a class = "nav-link scroll" href = "#interests" id ="hobbies">
-              <span aria-hidden="true"></span>interests</a>
+              <span aria-hidden="true"></span>art & hobbies</a>
           </li>
           <li class = "nav-item">
             <a class = "nav-link scroll" href = "#footer" id = "contact">
@@ -59,7 +59,7 @@
       src = assets/heading/profile-pic.jpg alt="pic of liz johnson">
 
         <h1>liz johnson</h1>
-          <h4>computer science ('24) @ Pomona College</h4> 
+          <h4>computer science '23.5 @ Pomona College</h4> 
           <div class = "links">
             <a href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="mailto:emja2020@mymail.pomona.edu">Email</a> 
@@ -74,10 +74,15 @@
     <div id = "current">
       <h2>currently...</h2>
       <ul>
-        <li>Researching methods to improve autonomous robot navigation at <a href="https://cs.pomona.edu/~ajc/arcslab/" target="_blank" rel="noopener noreferrer">ARCS Lab</a></li>
-        <li>Helping to improve our student website: <a href="https://pomonastudents.org/pages/software" target="_blank" rel="noopener noreferrer">Associated Students of Pomona College</a></li>
-        <li>Creating Data Visualizations & Dashboards for <a href="https://tsl.news/" target="_blank" rel="noopener noreferrer">The Student Life</a> </li> 
-        <li>Hanging out with my lovely friend group, <a href="assets/heading/Ptaro.jpg" target="_blank" rel="noopener noreferrer">pTaro</a> (づ｡◕‿‿◕｡)づ </li>
+        <li>Graduated! Enjoying my break until starting @  <a href="https://www.oracle.com/cloud/" target="_blank" rel="noopener noreferrer">Oracle &#9729;</a> in July 2024  </li> 
+        <li>Improving Pomona College's <a href="https://pomonastudents.org/pages/software" target="_blank" rel="noopener noreferrer"> student body website</a> </li>
+        <li>Learning fun things! Teaching myself Swift after learning Kotlin (づ｡◕‿‿◕｡)づ </li>
+      </ul>
+
+      <h2>previously...</h2>
+      <ul>
+        <li>Researched methods to improve autonomous robot navigation at <a href="https://cs.pomona.edu/~ajc/arcslab/" target="_blank" rel="noopener noreferrer">ARCS Lab</a></li>
+        <li>Studied abroad in Budapest, Hungary (visited 13 countries & became an avid traveler!)  </li> 
       </ul>
 
     </div>
@@ -85,8 +90,64 @@
       <h1>projects</h1>
     </div>
 
+    
+
     <div class ="project-container" id = project-cont>
       <!-- card 1 -->
+      <div class = "card">
+        <img class = "card-img" id = "p-recs-img" src = "assets/projects/p-recs.png" alt = "website displaying college course recommendations">
+        <div class = "items head">
+          <h2>p-recs</h2>
+          <h4>Course Recommendations for Pomona College Students</h4>
+        </div>
+        
+        <div class="content">
+          <div class = "items details">
+            <div class = "tag-container">
+              <span class="tag">Python (Pandas) </span>
+              <span class="tag"> Data Structuring </span>
+              <span class="tag">Web Development</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+            <p>Implemented word similarity scoring to enhance the relevance of course recommendations</p>
+             
+            <p>Group developed while at <a href="https://pomonastudents.org/pages/software" target="_blank" rel="noopener noreferrer">Associated Students of Pomona College</a> </p>
+          
+            <button onclick= "window.open('https://www.p-recs.com','_blank')">Get Course Recs!</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- card 2 -->
+      <div class = "card">
+        <img class = "card-img" id = "archive-img" src = "assets/projects/archive-it-3.png" alt = "phone app displaying images of pottery collection in a photo grid">
+        <div class = "items head">
+          <h2>ArchiveIt</h2>
+          <h4>An app to share and catalog personal collections</h4>
+        </div>
+        
+        <div class="content">
+          <div class = "items details">
+            <div class = "tag-container">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Swift- in progress</span>
+              <span class="tag">Jetpack Compose</span>
+              <span class="tag">iOS Development</span>
+            </div>
+            <p>ArchiveIt allows hobbyist collectors to easily document their collections. </p>
+              
+            <p> My dad, an avid ceramics collector, can catalog his pieces to share with local museums and other ceramic collectors </p>
+          
+            <div class = "tag-container">
+              <button onclick= "window.open('https://drive.google.com/drive/folders/1-23hRkAyTqns-ibj6rrY62R8jCXjX89s?usp=sharing','_blank')">App Demo</button>
+              <button onclick= "window.open('https://docs.google.com/document/d/1TYYWzHN9FkAGuxpqgTdh7qHD0SxgyPQpYatOHVocv7w/edit?usp=sharing','_blank')">App Proposal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- card 3 -->
       <div class = "card">
         <img class = "card-img" id = "research-img" src = "assets/projects/estella-courtyard.png" alt = "simulation of Estella Courtyard">
         <div class = "items head" id = "research-text">
@@ -187,11 +248,9 @@
 
             <p>Used Twitter API, Pandas, and Natural Language Toolkit to curate and analyze data.</p>
           </div>
-          
-            <div class = "tag-container">
-              <button onclick= "window.open('https://github.com/elizjo/oscars-project','_blank')"> Analysis</button>
-              <button onclick= "window.open('https://master.d29wdrux8l97y0.amplifyapp.com/','_blank')">Try App</button>
-            </div>
+        
+            <button onclick= "window.open('https://github.com/elizjo/oscars-project','_blank')"> Analysis</button>
+
               
           </div>
         </div>
@@ -210,12 +269,17 @@
             <img class = "art-img" src = "assets/art/flower-bandit.jpeg" alt = "Flower Bandit- Liz Johnson's 2021 art work">
           </div>
         </div>
+
+        <p>
+          Actively taking art commissions <a href="https://forms.gle/qSeYVenz818bYq3QA" target="_blank" rel="noopener noreferrer">here</a> ! 
+          </br> My  <a href="https://drive.google.com/drive/folders/1UIq16ikX6wtqW_Be01oCK2qzCO9ogVZv?usp=sharing" target="_blank" rel="noopener noreferrer">portfolio</a> mostly has human portraits, along with sticker & tattoo designs.
+        </p>
     </div>
 
     <div class = "sports" id = "interests">
       <h1>sports</h1>
         <p>
-          I picked up recreational road cycling and after my 10+ year journey in competitive skating. 
+          I enjoy throwing ceramic pots, cycling, and skating for fun (after 10+ years of competitive skating).
         </p>
 
           <div class = "project-container"> 
@@ -240,14 +304,16 @@
      
   </body>
   <footer id = footer>
-    thanks for visiting (✿◠‿◠) <br>
+
+    thanks for visiting! <br>
 
     <div class = "links">
+      <img src = "assets/heading/persimmon-logo-2.png" class = "logo">
       <a href="https://github.com/elizjo" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a href="mailto:emja2020@mymail.pomona.edu">Email</a> 
       <a href="https://www.linkedin.com/in/elizjo8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
 
-    <p><i>psst..</i>  if you're looking for a copy of my resume,  <a href="assets/resume/Johnson-Elizabeth-Resume23.pdf" target="_blank" rel="noopener noreferrer">it's here!</a></p>
+    <p><i>psst..</i>  if you're looking for a copy of my resume,  <a href="assets/resume/Johnson-Liz-Resume.pdf" target="_blank" rel="noopener noreferrer">it's here!</a></p>
   </footer>
 </html>
